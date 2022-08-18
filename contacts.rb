@@ -19,6 +19,19 @@ end
 
 def remove_strawberry(contacts)
   # your code here!
+  # 
+  contacts.each do |person, details|
+    if person == "Freddy Mercury"
+      details.each do |attribute, data|
+        if attribute == :favorite_ice_cream_flavors
+          data.each do |ice|
+            ice.delete_if do |ice|
+              ice == "strawberry"
+            end
+          end
+        end
+    end
+  end
 end
 
 # print the output to the terminal for inspection
